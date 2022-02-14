@@ -20,8 +20,9 @@
   },
   "homepage": "https://github.com/minhnv17/LTNC-Backend#readme",
   "dependencies": {
+    "dotenv": "^11.0.0",
     "express": "^4.17.2",
-    "mongoose": "^6.1.6"
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
