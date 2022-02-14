@@ -20,22 +20,4 @@ Students.getById = function(id, result){
     })
 }
 
-Students.login = (loginInfo, result) => {
-    console.log(loginInfo)
-    db.query(`SELECT * FROM students where ID=${mysql.escape(loginInfo.username)} and password=${mysql.escape(loginInfo.password)}`, (err, student)=>{
-        if(err || student.length == 0){
-            return result({
-                "checking": "false",
-                "id": ""
-            })
-        }
-        else{
-            result({
-                "checking": "true",
-                "id": student[0].ID
-            })
-        }
-    })
-}
-
 module.exports = Students;
