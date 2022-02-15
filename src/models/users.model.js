@@ -14,8 +14,8 @@ const Users = function(user){
 }
 
 Users.login = (loginInfo, result) => {
-    db.query(`SELECT * FROM users where ID=${mysql.escape(loginInfo.username)} and password=${mysql.escape(loginInfo.password)}`, (err, student)=>{
-        if(err || student.length == 0){
+    db.query(`SELECT * FROM users where ID=${mysql.escape(loginInfo.username)} and password=${mysql.escape(loginInfo.password)}`, (err, user)=>{
+        if(err || user.length == 0){
             return result({
                 "checking": "false",
                 "id": ""
@@ -24,7 +24,7 @@ Users.login = (loginInfo, result) => {
         else{
             result({
                 "checking": "true",
-                "id": student[0].ID
+                "id": user[0].ID
             })
         }
     })
