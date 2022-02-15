@@ -18,7 +18,7 @@ Students.getById = function(id, result){
                 else {
                     infoStudent[0]['class'] = student[0].class;
                     delete infoStudent[0]['password'];
-                    result(infoStudent[0]);
+                    result(infoStudent);
                 }
             })
         }
