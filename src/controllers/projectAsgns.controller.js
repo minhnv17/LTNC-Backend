@@ -9,8 +9,6 @@ exports.createProject = (req, res) => {
     // }
     var projectInfo = req.body
     if(projectInfo){
-        ProjectAsgns.registerProj(projectInfo, (callback) => {
-            res.json(callback)
-        })
+        ProjectAsgns.registerProj(projectInfo)
     }
 }
